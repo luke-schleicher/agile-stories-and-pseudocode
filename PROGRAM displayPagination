@@ -1,0 +1,57 @@
+PROGRAM displayPagination
+
+  displayPrevious()
+  displayNumbers()
+  replaceWithEllipses()
+  displayNext()
+  
+END
+
+
+PROGRAM displayPrevious
+
+  IF current_page is the first page
+    print "<-- Previous"
+  ELSE
+    print "<-- Previous" with a link to previous page
+  END 
+
+END
+
+
+PROGRAM displayNumbers
+
+  For EACH number in the list of pages DO
+    IF number is the current page number
+      print number
+    ELSE
+      print number with a link to that page
+    END
+  END
+
+END
+
+PROGRAM replaceWithEllipses
+  
+  IF current page is greater than or equal to 5
+    replace pages 3 through current page - 2 with "..."
+  END
+
+  IF current page is less than or equal to the number of pages - 4
+    replace pages current page + 2 through number of pages - 2 with "..."
+  END
+  
+END
+
+
+PROGRAM displayNext
+
+  IF current_page is the last page
+    print "Next -->"
+  ELSE
+    print "Next -->" with a link to next page
+  END 
+
+END
+
+displayPagination()

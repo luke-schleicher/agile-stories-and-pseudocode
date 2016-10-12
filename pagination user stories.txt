@@ -1,0 +1,39 @@
+OVERARCHING USER STORIES
+
+As a product browser, I want to load a limited amount of products per page, so that my browser displays the products promptly
+
+As a product browser, I want a pagination navigation displayed, so that I can still navigate all the products easily
+
+DETAILED USER STORIES
+
+As a product browser, I want quick "Previous" and "Next" links, so that I can easily go to the next or last page without thinking about what page I'm currently on
+
+As a product browser, I want my current page as well as the pages immediately before and after my current page displayed, so that I have some context for where I am at in the pagination
+
+As a product browser, I always want the first 2 and last 2 pages visible, so that I can quickly navigate to the beginning or end of the product pages
+
+As a product browser, I want all other pages to be replaced with an ellipses so that I don't have to look at all the page numbers
+
+
+
+SCENARIOS
+
+1. You are on the first page
+
+( "Previous" link is not clickable)
+
+2. You are on the last page
+
+("Next" link is not clickable)
+
+3. You only have one page
+
+(no "next" or "previous" links displayed) 
+
+4. You are in the middle pages somewhere
+
+(Previous, 1, 2, ..., p - 1, p, p + 1, ... l - 1, l, next)
+
+5. You are on the third page but there are only four
+
+(Previous, 1, 2, 3, 4, Next)
